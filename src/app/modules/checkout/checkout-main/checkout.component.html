@@ -19,9 +19,9 @@
                     <td>{{item.paymentType}}</td>
                     <td>{{showCheckoutOrders(item.order)}}</td>
                     <td>
-                        <button (click)="deleteOrderById(item.id)" class="btn btn-danger"
+                        <button (click)="deleteCheckoutById(item.id)" class="btn btn-danger"
                             style="margin-left: 10px">Delete</button>
-                        <button (click)="updateOrderById(item.id)" class="btn btn-info"
+                        <button (click)="updateCheckoutById(item.id)" class="btn btn-info"
                             style="margin-left: 10px">Update</button>
                     </td>
                 </tr>
