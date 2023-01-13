@@ -31,9 +31,9 @@ pipeline {
                             remote.name = userName
                             remote.identityFile = identity
                             remote.allowAnyHosts = 'true'
-                            sshCommand remote: remote, command: 'docker container kill https-restaurant-ui'
-                            sshCommand remote: remote, command: 'docker rm -v https-restaurant-ui'
-                            sshCommand remote: remote, command: "docker rmi ${dockerLogin}/restaurant-ui:latest"
+//                             sshCommand remote: remote, command: 'docker container kill https-restaurant-ui'
+//                             sshCommand remote: remote, command: 'docker rm -v https-restaurant-ui'
+//                             sshCommand remote: remote, command: "docker rmi ${dockerLogin}/restaurant-ui:latest"
                             sshCommand remote: remote, command: "docker login | docker pull ${dockerLogin}/restaurant-ui"
                             sshCommand remote: remote, command: "docker container run -d -p 443:443 --name https-restaurant-ui ${dockerLogin}/restaurant-ui"
                             sshCommand remote: remote, command: 'exit'
